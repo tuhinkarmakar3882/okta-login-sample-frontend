@@ -1,5 +1,5 @@
 <template>
-  <div class="index-page">
+  <section class="index-page">
     <h1>Getting Started with OKTA Login</h1>
     <hr />
 
@@ -8,7 +8,7 @@
         Let's Start
       </button>
     </nuxt-link>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -35,7 +35,10 @@ export default {
 
 <style lang="scss" scoped>
 .index-page {
-  display: grid;
-  place-items: center;
+  main {
+    * + * {
+      margin: var(--spacing-standard);
+    }
+  }
 }
 </style>
