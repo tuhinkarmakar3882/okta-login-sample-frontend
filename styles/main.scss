@@ -1,0 +1,25 @@
+@import "assets/variables";
+@import "assets/defaults";
+@import "assets/buttons";
+@import "assets/generic";
+@import "assets/transitions";
+@import "assets/skeletons";
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  border: none;
+
+  &:active {
+    outline: none;
+    border: none;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion) {
+    transition: unset !important;
+  }
+}
