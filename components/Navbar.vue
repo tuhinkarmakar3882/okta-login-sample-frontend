@@ -1,6 +1,5 @@
 <template>
   <div class="nav-bar-component">
-    <i v-ripple class="mdi mdi-menu mdi-24px" />
     <h1>{{ appName }}</h1>
 
     <a href="https://www.linkedin.com/in/tuhinkarmakar3882/" target="_blank">
@@ -11,6 +10,7 @@
 
 <script>
 import * as packageJSON from '~/package.json'
+
 export default {
   name: 'Navbar',
   data() {
@@ -31,12 +31,7 @@ export default {
   align-items: center;
   background: var(--nav-bar-color);
   height: var(--top-nav-size);
-
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  padding-left: var(--spacing-milli);
 
   h1 {
     font-family: monospace;

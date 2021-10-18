@@ -143,6 +143,6 @@ hr {
   border: none;
   height: var(--spacing-single);
   width: 100%;
-  background: var(--muted-color);
-  margin: 1rem var(--spacing-zero);
+  background: var(--body-background-alternate-2);
+  margin: var(--spacing-standard) var(--spacing-zero);
 }

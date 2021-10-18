@@ -1,22 +1,20 @@
 <template>
-  <div class="index-page">
-    <h1>Getting Started with OKTA Login</h1>
-    <hr />
-    <button>Login via OKTA</button>
+  <div class="login-callback-page">
+    <h1>Okta Login Callback Page</h1>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'LoginCallback',
+
   components: {},
 
   data() {
     return {
-      pageTitle: 'Getting Started',
+      pageTitle: 'Please Wait',
     }
   },
-
-  watch: {},
 
   mounted() {},
 
@@ -31,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.index-page {
+.login-callback-page {
   display: grid;
   place-items: center;
 }

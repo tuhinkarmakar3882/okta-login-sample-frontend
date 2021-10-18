@@ -23,6 +23,7 @@ export default {
   display: grid;
   grid-template-rows: auto 1fr;
   min-height: 100vh;
+
   main {
     padding: var(--spacing-standard);
   }

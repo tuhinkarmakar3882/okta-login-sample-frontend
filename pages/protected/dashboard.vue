@@ -1,18 +1,19 @@
 <template>
   <div class="index-page">
-    <h1>Getting Started with OKTA Login</h1>
-    <hr />
-    <button>Login via OKTA</button>
+    <h1>Dashboard</h1>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'Dashboard',
+  middleware: 'protectedRoute',
+
   components: {},
 
   data() {
     return {
-      pageTitle: 'Getting Started',
+      pageTitle: 'Dashboard',
     }
   },
 

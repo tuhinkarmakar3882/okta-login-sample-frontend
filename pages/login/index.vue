@@ -1,18 +1,18 @@
 <template>
-  <div class="index-page">
-    <h1>Getting Started with OKTA Login</h1>
-    <hr />
-    <button>Login via OKTA</button>
+  <div class="login-page">
+    <h1>Okta Login Page</h1>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'Login',
+
   components: {},
 
   data() {
     return {
-      pageTitle: 'Getting Started',
+      pageTitle: 'Login',
     }
   },
 
@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.index-page {
+.login-page {
   display: grid;
   place-items: center;
 }
