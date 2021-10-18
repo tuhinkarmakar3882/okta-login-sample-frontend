@@ -2,7 +2,12 @@
   <div class="index-page">
     <h1>Getting Started with OKTA Login</h1>
     <hr />
-    <button>Login via OKTA</button>
+
+    <nuxt-link v-slot="{ navigate }" to="/login" custom>
+      <button @click="navigate" v-ripple class="primary-button">
+        Let's Start
+      </button>
+    </nuxt-link>
   </div>
 </template>
 
@@ -15,8 +20,6 @@ export default {
       pageTitle: 'Getting Started',
     }
   },
-
-  watch: {},
 
   mounted() {},
 
