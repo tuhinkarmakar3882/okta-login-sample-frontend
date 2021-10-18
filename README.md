@@ -1,12 +1,11 @@
-# Nuxt Starter Code Template By Tuhin
-Make sure to update the names in the package.json
+# OKTA OAuth Login Demo: Frontend
 
+## How to run the app?
 
-## Build Setup
 ```bash
 # install dependencies
 $ yarn install
-
+$ 
 # serve with hot reload at localhost:3000
 $ yarn dev
 

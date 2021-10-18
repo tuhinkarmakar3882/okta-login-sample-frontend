@@ -30,7 +30,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   background: var(--nav-bar-color);
-  height: var(--spacing-large);
+  height: var(--top-nav-size);
 
   button {
     display: flex;
@@ -41,6 +41,8 @@ export default {
   h1 {
     font-family: monospace;
     margin: 0 auto 0 0;
+    font-size: var(--spacing-large);
+    line-height: 1;
   }
 
   a {
@@ -48,8 +50,8 @@ export default {
   }
 
   i {
-    height: var(--spacing-large);
-    width: var(--spacing-large);
+    height: var(--top-nav-size);
+    width: var(--top-nav-size);
     display: grid;
     place-items: center;
 

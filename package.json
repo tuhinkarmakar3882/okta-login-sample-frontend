@@ -1,6 +1,6 @@
 {
-  "name": "project-name",
-  "appName": "project-name",
+  "name": "okta-login-demo",
+  "appName": "OKTA Login Demo",
   "description": "project-description",
   "version": "1.0.0",
   "port": "3000",
