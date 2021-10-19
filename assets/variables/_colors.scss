@@ -16,9 +16,6 @@
   --secondary-color: hsl(87, 60%, 40%);
   --secondary-color-light: hsl(87, 60%, 68%);
   --secondary-button-text-color: hsl(0, 0%, 100%);
-  --default-shadow-color: hsla(0, 0%, 0%, .16);
-  --default-overlay: hsla(0, 0%, 0%, .48);
-  --default-ripple: hsla(0, 0%, 0%, .25);
   --default-button-text-color: hsl(0, 0%, 100%);
   --default-button-background-color: hsl(0, 0%, 0%);
 
@@ -40,9 +37,6 @@
     --body-background-alternate: hsl(0, 0%, 10%);
     --body-background-alternate-2: hsl(0, 0%, 16%);
     --muted-color: hsl(0, 0%, 60%);
-    --default-shadow-color: hsla(0, 0%, 0%, .16);
-    --default-overlay: hsla(0, 0%, 0%, .48);
-    --default-ripple: hsla(0, 0%, 100%, .25);
     --default-button-text-color: hsl(0, 0%, 0%);
     --default-button-background-color: hsl(0, 0%, 100%);
   }
@@ -66,9 +60,6 @@ body.light-theme {
   --secondary-color: hsl(87, 60%, 40%);
   --secondary-color-light: hsl(87, 60%, 68%);
   --secondary-button-text-color: hsl(0, 0%, 100%);
-  --default-shadow-color: hsla(0, 0%, 0%, .16);
-  --default-overlay: hsla(0, 0%, 0%, .48);
-  --default-ripple: hsla(0, 0%, 0%, .25);
   --default-button-text-color: hsl(0, 0%, 100%);
   --default-button-background-color: hsl(0, 0%, 0%);
 }
@@ -91,9 +82,6 @@ body.dark-theme {
   --body-background-alternate: hsl(0, 0%, 10%);
   --body-background-alternate-2: hsl(0, 0%, 16%);
   --muted-color: hsl(0, 0%, 60%);
-  --default-shadow-color: hsla(0, 0%, 0%, .16);
-  --default-overlay: hsla(0, 0%, 0%, .48);
-  --default-ripple: hsla(0, 0%, 100%, .25);
   --default-button-text-color: hsl(0, 0%, 0%);
   --default-button-background-color: hsl(0, 0%, 100%);
 }
