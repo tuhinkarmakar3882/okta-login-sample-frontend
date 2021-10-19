@@ -85,7 +85,7 @@
 
     <footer>
       <nuxt-link v-slot="{ navigate }" custom to="/okta-setup">
-        <button v-ripple class="primary-button" @click="navigate">
+        <button class="primary-button" @click="navigate">
           Next: The OKTA Setup
         </button>
       </nuxt-link>

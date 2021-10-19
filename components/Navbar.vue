@@ -1,7 +1,7 @@
 <template>
   <div class="nav-bar-component">
     <nuxt-link v-slot="{ navigate }" to="/" custom>
-      <h1 @click="navigate" v-ripple>{{ appName }}</h1>
+      <h1 @click="navigate">{{ appName }}</h1>
     </nuxt-link>
 
     <a href="https://www.linkedin.com/in/tuhinkarmakar3882/" target="_blank">

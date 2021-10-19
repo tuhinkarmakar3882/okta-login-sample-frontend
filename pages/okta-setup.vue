@@ -33,7 +33,7 @@
           over there.
         </p>
         <a href="https://developer.okta.com/signup/" target="_blank">
-          <button v-ripple class="primary-button">Open Okta Dev</button>
+          <button class="primary-button">Open Okta Dev</button>
         </a>
       </details>
 
@@ -89,7 +89,7 @@
 
     <footer>
       <nuxt-link v-slot="{ navigate }" custom to="/the-frontend-code">
-        <button v-ripple class="primary-button" @click="navigate">
+        <button class="primary-button" @click="navigate">
           Next: The Frontend Code
         </button>
       </nuxt-link>

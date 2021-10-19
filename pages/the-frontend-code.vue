@@ -3,6 +3,15 @@
     <header>
       <h1>{{ pageTitle }}</h1>
       <p>Let's see the bare minimum code to get out frontend working</p>
+      <p>
+        You can clone the repo hero:
+        <a
+          target="_blank"
+          href="https://github.com/tuhinkarmakar3882/okta-login-sample-frontend"
+        >
+          Okta Demo Frontend Code
+        </a>
+      </p>
       <hr />
     </header>
 
@@ -62,7 +71,7 @@ loginButton.addEventListener('click', async () => {
 
     <footer>
       <nuxt-link v-slot="{ navigate }" custom to="/the-backend-code">
-        <button v-ripple class="primary-button" @click="navigate">
+        <button class="primary-button" @click="navigate">
           Next: The Backend Code
         </button>
       </nuxt-link>
