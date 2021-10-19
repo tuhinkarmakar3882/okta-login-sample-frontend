@@ -22,6 +22,10 @@ export default {
     client: true,
   },
 
+  generate: {
+    fallback: true,
+  },
+
   build: nuxtBuildConfig,
   render: {
     injectScripts: true,
