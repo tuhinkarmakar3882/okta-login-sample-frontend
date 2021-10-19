@@ -24,14 +24,36 @@ export default {
       appName: packageJSON.appName,
     }
   },
+  mounted() {
+    this.checkForColorPreference()
+  },
   methods: {
+    updateColorPreference(theme) {
+      localStorage.setItem('theme', theme)
+    },
+    checkForColorPreference() {
+      const preferredTheme = localStorage.getItem('theme')
+
+      switch (preferredTheme) {
+        case 'light':
+          document.body.classList.add('light-theme')
+          document.body.classList.remove('dark-theme')
+          break
+        case 'dark':
+          document.body.classList.remove('light-theme')
+          document.body.classList.add('dark-theme')
+          break
+      }
+    },
     changeTheme() {
       if (document.body.classList.contains('light-theme')) {
         document.body.classList.remove('light-theme')
         document.body.classList.add('dark-theme')
+        this.updateColorPreference('dark')
       } else {
         document.body.classList.add('light-theme')
         document.body.classList.remove('dark-theme')
+        this.updateColorPreference('light')
       }
     },
   },
