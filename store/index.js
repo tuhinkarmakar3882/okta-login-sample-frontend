@@ -15,8 +15,21 @@ export const mutations = {
 }
 
 export const actions = {
-  async login({ commit }, { user }) {
-    await commit('SET_USER', user)
+  async login(
+    { commit },
+    { tokenType, expiresIn, accessToken, scope, idToken, isAuthenticated }
+  ) {
+    if (!tokenType || !expiresIn || !accessToken || !scope || !idToken)
+      throw new Error('Something is missing....')
+
+    await commit('SET_USER', {
+      tokenType,
+      expiresIn,
+      accessToken,
+      scope,
+      idToken,
+      isAuthenticated,
+    })
   },
 
   async logout({ commit }) {

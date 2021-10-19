@@ -35,7 +35,7 @@
         Tokens.</q
       >
     </blockquote>
-    <form>
+    <form @submit.prevent @submit="loginWithOKTA">
       <section>
         <p>Put Your Client ID Here:</p>
         <input
@@ -64,13 +64,7 @@
         />
       </section>
 
-      <button
-        type="submit"
-        class="primary-button"
-        @submit.prevent="loginWithOKTA"
-      >
-        Login via Okta
-      </button>
+      <button type="submit" class="primary-button">Login via Okta</button>
     </form>
   </div>
 </template>
@@ -87,7 +81,7 @@ export default {
       authServerId: 'default',
       yourOktaDomain: '',
       clientId: '',
-      redirectUri: '',
+      redirectUri: 'http://localhost:8000/login/callback/',
     }
   },
 
