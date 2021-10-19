@@ -1,11 +1,10 @@
-import {OktaAuth} from "@okta/okta-auth-js";
+import { OktaAuth } from '@okta/okta-auth-js'
 
-export const yourOktaDomain = "";
-const authServerId = "default";
-export const clientId = "";
-export const clientSecret = "";
-export const redirectUri = "http://localhost:8000/login/callback/";
-
+export const yourOktaDomain = ''
+const authServerId = 'default'
+export const clientId = ''
+export const clientSecret = ''
+export const redirectUri = 'http://localhost:8000/login/callback/'
 
 export const authClient = new OktaAuth({
   url: `https://${yourOktaDomain}`,
@@ -13,6 +12,5 @@ export const authClient = new OktaAuth({
   redirectUri,
   responseType: 'token',
   pkce: false,
-  issuer: `https://${yourOktaDomain}/oauth2/${authServerId}`
-});
-
+  issuer: `https://${yourOktaDomain}/oauth2/${authServerId}`,
+})
