@@ -1,4 +1,4 @@
-import { appName, description, keywords } from '../package.json'
+import { appName, description } from '../package.json'
 
 export const nuxtHeadConfig = {
   titleTemplate: `%s | ${appName}`,
