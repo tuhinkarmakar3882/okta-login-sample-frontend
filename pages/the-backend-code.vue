@@ -9,7 +9,7 @@
           target="_blank"
           href="https://github.com/tuhinkarmakar3882/okta-login-demo-backend"
         >
-          Okta Demo Frontend Code
+          Okta Demo Backend Code
         </a>
       </p>
       <hr />
