@@ -69,26 +69,5 @@ export default {
   * + * {
     margin: var(--spacing-standard) var(--spacing-zero);
   }
-
-  details {
-    background: var(--nav-bar-color-semi-transparent);
-    padding: var(--spacing-nano) var(--spacing-milli);
-    border-radius: var(--spacing-nano);
-    box-shadow: 0 0 4px var(--body-background-alternate-2);
-
-    summary {
-      font-size: var(--spacing-large);
-      font-family: var(--heading-alternate-font);
-      color: var(--heading-text-color);
-    }
-
-    p {
-      font-weight: 400;
-    }
-
-    & > details > summary {
-      font-size: var(--spacing-medium);
-    }
-  }
 }
 </style>
