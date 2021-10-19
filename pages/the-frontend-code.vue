@@ -2,27 +2,22 @@
   <section class="the-frontend-code-page">
     <header>
       <h1>{{ pageTitle }}</h1>
-      <p>
-        We'll quickly talk about the basic flow of OAuth and the prerequisites
-        and the code flow.
-      </p>
-      <a href="#the-backend-code">
-        Already read this before? Skip Theory & Proceed to Next Step
-      </a>
+      <p>Let's see the bare minimum code to get out frontend working</p>
       <hr />
     </header>
+
     <main>
-      <pre><code class="language-js">{{frontendCode}}</code></pre>
+      <h3>Let's install the JavaScript Package</h3>
+      <pre><code class="language-xml">
+&lt;script src="https://global.oktacdn.com/okta-auth-js/4.5.0/okta-auth-js.min.js" type="text/javascript"&gt;&lt;/script&gt;
+      </code></pre>
+      <p>OR</p>
+      <pre><code class="language-bash">yarn add @okta/okta-auth-js  </code></pre>
     </main>
 
     <footer>
       <nuxt-link v-slot="{ navigate }" custom to="/the-backend-code">
-        <button
-          v-ripple
-          class="primary-button"
-          @click="navigate"
-          id="the-backend-code"
-        >
+        <button v-ripple class="primary-button" @click="navigate">
           Next: The Backend Code
         </button>
       </nuxt-link>

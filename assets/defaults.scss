@@ -67,9 +67,9 @@ p, span, small {
 pre, code, kbd, samp {
   font-size: 15px;
   font-weight: 500;
-  font-family: var(--mono-font);
-  background: var(--muted-color);
-  color: var(--body-background);
+  font-family: monospace;
+  background: var(--body-background-alternate-2);
+  color: var(--heading-text-color);
   margin: var(--spacing-standard) var(--spacing-zero);
   border-radius: var(--spacing-nano);
   overflow-x: scroll;
@@ -77,6 +77,10 @@ pre, code, kbd, samp {
   word-break: break-word;
   word-wrap: break-word;
   line-height: 1.8;
+
+  * {
+    font-family: monospace;
+  }
 }
 
 code {

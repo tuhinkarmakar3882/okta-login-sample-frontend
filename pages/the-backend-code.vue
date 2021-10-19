@@ -6,9 +6,6 @@
         We'll quickly talk about the basic flow of OAuth and the prerequisites
         and the code flow.
       </p>
-      <a href="#login-demo">
-        Already read this before? Skip Theory & Proceed to Next Step
-      </a>
       <hr />
     </header>
     <main>
@@ -60,12 +57,7 @@ def login_callback(request, *args, **kwargs):
 
     <footer>
       <nuxt-link v-slot="{ navigate }" custom to="/login">
-        <button
-          v-ripple
-          class="primary-button"
-          @click="navigate"
-          id="login-demo"
-        >
+        <button v-ripple class="primary-button" @click="navigate">
           Next: Demo
         </button>
       </nuxt-link>

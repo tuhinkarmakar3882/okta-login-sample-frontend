@@ -6,9 +6,6 @@
         We'll quickly talk about the basic flow of OAuth and the prerequisites
         and the code flow.
       </p>
-      <a href="#okta-setup">
-        Already read this before? Skip Theory & Proceed to Next Step
-      </a>
       <hr />
     </header>
 
@@ -88,12 +85,7 @@
 
     <footer>
       <nuxt-link v-slot="{ navigate }" custom to="/okta-setup">
-        <button
-          v-ripple
-          class="primary-button"
-          @click="navigate"
-          id="okta-setup"
-        >
+        <button v-ripple class="primary-button" @click="navigate">
           Next: The OKTA Setup
         </button>
       </nuxt-link>
