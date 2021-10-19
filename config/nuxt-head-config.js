@@ -14,11 +14,6 @@ export const nuxtHeadConfig = {
       name: 'description',
       content: description,
     },
-    {
-      hid: 'keywords',
-      name: 'keywords',
-      content: keywords.join(','),
-    },
   ],
   link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
 }
