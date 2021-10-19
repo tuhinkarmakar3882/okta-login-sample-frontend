@@ -1,32 +1,29 @@
 <template>
-  <section class="index-page">
+  <section class="the-frontend-code-page">
     <header>
-      <h1>The Okta Setup</h1>
+      <h1>{{ pageTitle }}</h1>
       <p>
         We'll quickly talk about the basic flow of OAuth and the prerequisites
         and the code flow.
       </p>
-      <a href="#front-end-code">
+      <a href="#the-backend-code">
         Already read this before? Skip Theory & Proceed to Next Step
       </a>
       <hr />
     </header>
-
     <main>
-      <pre><code class="language-js"></code></pre>
+      <pre><code class="language-js">{{frontendCode}}</code></pre>
     </main>
 
-    <main></main>
-
     <footer>
-      <nuxt-link v-slot="{ navigate }" custom to="/the-frontend-code">
+      <nuxt-link v-slot="{ navigate }" custom to="/the-backend-code">
         <button
           v-ripple
           class="primary-button"
           @click="navigate"
-          id="front-end-code"
+          id="the-backend-code"
         >
-          Next: The Frontend Code
+          Next: The Backend Code
         </button>
       </nuxt-link>
     </footer>
@@ -37,10 +34,10 @@
 import codeHighlighter from '~/utility/code-highlighting'
 
 export default {
-  name: 'OktaSetup',
+  name: 'TheFrontendCode',
   data() {
     return {
-      pageTitle: 'OKTA Setup',
+      pageTitle: 'The Frontend Code',
     }
   },
 
@@ -57,7 +54,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.index-page {
+.the-frontend-code-page {
   * + * {
     margin: var(--spacing-standard) 0;
   }

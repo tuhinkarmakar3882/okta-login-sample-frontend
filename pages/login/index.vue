@@ -35,10 +35,14 @@
         Tokens.</q
       >
     </blockquote>
+
+    <button @click="loginWithOKTA">Login via Okta</button>
   </div>
 </template>
 
 <script>
+import { authClient } from '~/plugins/okta-client'
+
 export default {
   name: 'Login',
 
@@ -54,7 +58,13 @@ export default {
 
   mounted() {},
 
-  methods: {},
+  methods: {
+    async loginWithOKTA() {
+      await authClient.token.getWithRedirect({
+        responseType: 'code',
+      })
+    },
+  },
 
   head() {
     return {

@@ -1,10 +1,9 @@
 import { OktaAuth } from '@okta/okta-auth-js'
 
-export const yourOktaDomain = ''
 const authServerId = 'default'
-export const clientId = ''
-export const clientSecret = ''
-export const redirectUri = 'http://localhost:8000/login/callback/'
+export const yourOktaDomain = 'your-okta-domain'
+export const clientId = 'clientId'
+export const redirectUri = 'redirectUri'
 
 export const authClient = new OktaAuth({
   url: `https://${yourOktaDomain}`,

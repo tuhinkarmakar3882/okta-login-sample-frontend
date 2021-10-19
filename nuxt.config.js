@@ -5,7 +5,7 @@ import { nuxtBuildConfig } from './config/nuxt-build-config'
 export default {
   server: {
     host: packageJSON.host,
-    port: packageJSON.port
+    port: packageJSON.port,
   },
   ssr: false,
 
@@ -16,35 +16,35 @@ export default {
   buildModules: [
     '@nuxtjs/eslint-module',
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/composition-api/module'
+    '@nuxtjs/composition-api/module',
   ],
 
   modern: {
     server: true,
-    client: true
+    client: true,
   },
 
   build: nuxtBuildConfig,
   render: {
     injectScripts: true,
-    resourceHints: true
+    resourceHints: true,
   },
 
   loading: {
     color: '#aeacff',
     failedColor: '#ff8282',
     continuous: true,
-    height: '2px'
+    height: '2px',
   },
 
   layoutTransition: {
     name: 'fade-shift',
-    mode: 'out-in'
+    mode: 'out-in',
   },
 
   pageTransition: {
     name: 'slide-left',
-    mode: 'out-in'
+    mode: 'out-in',
   },
 
   head: nuxtHeadConfig,
