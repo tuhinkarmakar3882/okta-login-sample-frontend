@@ -81,7 +81,7 @@
           </p>
           <p>
             In this case, let's set it to
-            <code>http://{{ FRONTEND_URL }}</code>
+            <code>{{ FRONTEND_URL }}</code>
           </p>
         </details>
       </details>
@@ -105,7 +105,7 @@ export default {
   data() {
     return {
       pageTitle: 'OKTA Setup',
-      FRONTEND_URL: window.location.host,
+      FRONTEND_URL: window.location.origin,
     }
   },
 

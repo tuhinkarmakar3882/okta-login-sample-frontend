@@ -32,7 +32,7 @@ def login_callback(request, *args, **kwargs):
     client_id = 'your-okta-client-id-goes-here'
     domain_url = 'your-okta-domain-url-goes-here'
 
-    frontend_redirection_url = "http://{{FRONTEND_URL}}/login/callback"
+    frontend_redirection_url = "{{FRONTEND_URL}}/login/callback"
     okta_auth_endpoint = "https://{}/oauth2/default/v1/token".format(domain_url)
     backend_redirect_uri = 'http://localhost:8000/login/callback/'
 
@@ -107,7 +107,7 @@ export default {
   data() {
     return {
       pageTitle: 'The Backend Code',
-      FRONTEND_URL: window.location.host,
+      FRONTEND_URL: window.location.origin,
     }
   },
 
