@@ -43,6 +43,8 @@ export default {
           document.body.classList.remove('light-theme')
           document.body.classList.add('dark-theme')
           break
+        default:
+          console.log('No Preferred Theme Found.')
       }
     },
     changeTheme() {
