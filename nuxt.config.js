@@ -8,6 +8,7 @@ export default {
     port: packageJSON.port,
   },
   ssr: false,
+  target: 'static',
   plugins: [],
   modules: [],
 
@@ -18,7 +19,6 @@ export default {
   ],
 
   modern: {
-    server: true,
     client: true,
   },
 

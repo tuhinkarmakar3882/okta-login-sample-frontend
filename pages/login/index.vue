@@ -35,34 +35,80 @@
         Tokens.</q
       >
     </blockquote>
+    <form>
+      <section>
+        <p>Put Your Client ID Here:</p>
+        <input
+          type="text"
+          v-model="clientId"
+          required
+          placeholder="e.g. xxxxxxxxxxxxxxxxxxxx"
+        />
+      </section>
+      <section>
+        <p>Put Your Redirect URI Here:</p>
+        <input
+          type="text"
+          v-model="redirectUri"
+          required
+          placeholder="e.g. http://localhost:8000/login/callback"
+        />
+      </section>
+      <section>
+        <p>Put Your Okta Domain Here</p>
+        <input
+          type="text"
+          v-model="yourOktaDomain"
+          required
+          placeholder="e.g. https://dev-xxxxxxxx.okta.com"
+        />
+      </section>
 
-    <button @click="loginWithOKTA">Login via Okta</button>
+      <button
+        type="submit"
+        class="primary-button"
+        @submit.prevent="loginWithOKTA"
+      >
+        Login via Okta
+      </button>
+    </form>
   </div>
 </template>
 
 <script>
-import { authClient } from '~/plugins/okta-client'
+import { OktaAuth } from '@okta/okta-auth-js'
 
 export default {
   name: 'Login',
 
-  components: {},
-
   data() {
     return {
       pageTitle: 'Login',
+      authServerId: 'default',
+      yourOktaDomain: '',
+      clientId: '',
+      redirectUri: '',
     }
   },
 
-  watch: {},
-
-  mounted() {},
-
   methods: {
     async loginWithOKTA() {
-      await authClient.token.getWithRedirect({
-        responseType: 'code',
-      })
+      try {
+        const authClient = new OktaAuth({
+          url: this.yourOktaDomain,
+          clientId: this.clientId,
+          redirectUri: this.redirectUri,
+          responseType: 'token',
+          pkce: false,
+          issuer: `${this.yourOktaDomain}/oauth2/${this.authServerId}`,
+        })
+
+        await authClient.token.getWithRedirect({
+          responseType: 'code',
+        })
+      } catch (e) {
+        alert(e)
+      }
     },
   },
 
@@ -78,6 +124,16 @@ export default {
 .login-page {
   * + * {
     margin: var(--spacing-standard) var(--spacing-zero);
+  }
+
+  form {
+    background: var(--nav-bar-color);
+    padding: var(--spacing-standard);
+    display: grid;
+
+    input {
+      width: 100%;
+    }
   }
 }
 </style>
