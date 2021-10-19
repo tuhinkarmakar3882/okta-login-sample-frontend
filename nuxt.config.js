@@ -8,9 +8,7 @@ export default {
     port: packageJSON.port,
   },
   ssr: false,
-
-  plugins: [{ src: '~/plugins/material-ripple.js', mode: 'client' }],
-
+  plugins: [],
   modules: [],
 
   buildModules: [
@@ -35,11 +33,6 @@ export default {
     failedColor: '#ff8282',
     continuous: true,
     height: '2px',
-  },
-
-  layoutTransition: {
-    name: 'fade-shift',
-    mode: 'out-in',
   },
 
   pageTransition: {
