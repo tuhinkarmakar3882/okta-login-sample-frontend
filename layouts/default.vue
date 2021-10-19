@@ -19,8 +19,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'assets/variables/breakpoint';
-
 .default-layout {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -29,9 +27,10 @@ export default {
 
   main {
     padding: var(--spacing-standard);
-    max-width: $desktop-screen-size;
+    max-width: var(--max-accesible-size);
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
   }
 }
 </style>
