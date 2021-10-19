@@ -2,6 +2,7 @@
   margin: var(--spacing-zero);
   padding: var(--spacing-zero);
   box-sizing: border-box;
+  scroll-behavior: smooth;
   transition: all 200ms ease-in-out;
   -webkit-tap-highlight-color: transparent;
 
@@ -69,7 +70,6 @@ pre, code, kbd, samp {
   font-family: var(--mono-font);
   background: var(--muted-color);
   color: var(--body-background);
-  padding: var(--spacing-standard);
   margin: var(--spacing-standard) var(--spacing-zero);
   border-radius: var(--spacing-nano);
   overflow-x: scroll;
@@ -91,6 +91,7 @@ i {
 
 a {
   font-weight: 900;
+  line-height: var(--paragraph-line-height);
   color: var(--primary-color);
 
   @media (prefers-color-scheme: dark) {
@@ -156,4 +157,26 @@ blockquote {
   padding: 1rem;
   border-left: 4px solid var(--primary-color);
   background: var(--body-background-alternate);
+}
+
+details {
+  background: var(--nav-bar-color-semi-transparent);
+  padding: var(--spacing-nano) var(--spacing-milli);
+  border-radius: var(--spacing-nano);
+  box-shadow: 0 0 4px var(--body-background-alternate-2);
+
+  summary {
+    cursor: pointer;
+    font-size: var(--spacing-large);
+    font-family: var(--heading-alternate-font);
+    color: var(--heading-text-color);
+  }
+
+  p {
+    font-weight: 400;
+  }
+
+  & > details > summary {
+    font-size: var(--spacing-medium);
+  }
 }
